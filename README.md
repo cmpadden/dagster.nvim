@@ -1,3 +1,5 @@
+![Banner](.github/banner.png)
+
 # dagster.nvim
 
 > [!WARNING]
