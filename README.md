@@ -29,7 +29,7 @@ Using [lazy.nvim](https://github.com/folke/lazy.nvim):
 
 ### `:Dagster [ARGS]...`
 
-Any `dagster` can be run through the `:Dagster` command. For example, see an example of running `dagster definitions validate` in the screenshot below.
+Any `dagster` can be run through the `:Dagster` command. See an example of running `dagster definitions validate` in the screenshot below.
 
 ![:Materialize Example](.github/screenshot-definitions-validate.png)
 
@@ -37,4 +37,6 @@ Any `dagster` can be run through the `:Dagster` command. For example, see an exa
 
 Assets can be materialized by using the `:Materialize` user command and supplying a selector string.
 
-![:Materialize Example](.github/screenshot-materialize.png)
+Or by creating a visual selection, and then running the command `:'<,'>Materialize`.
+
+![:Materialize Example](.github/recording-materialize-selection.gif)
