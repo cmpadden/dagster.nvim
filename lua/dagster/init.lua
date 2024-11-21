@@ -1,6 +1,6 @@
 local M = {}
 
-local config = {
+M.config = {
     dagster_binary = 'dagster',
 }
 
@@ -56,7 +56,7 @@ end
 ----------------------------------------------------------------------------------------------------
 
 local function cli(arguments)
-    local command = { config.dagster_binary }
+    local command = { M.config.dagster_binary }
     vim.list_extend(command, arguments)
     print(table.concat(vim.fn.systemlist(command), '\n'))
 end
@@ -73,6 +73,9 @@ end
 
 M.setup = function(opts)
     opts = opts or {}
+
+    -- merge user options w/ default configuration, overwriting defaults
+    M.config = vim.tbl_deep_extend("force", M.config, opts)
 
     vim.api.nvim_create_user_command('Dagster', function(input)
         local arguments = _split_words(input.args)

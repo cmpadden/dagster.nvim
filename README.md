@@ -18,12 +18,11 @@ Using [lazy.nvim](https://github.com/folke/lazy.nvim):
 ```lua
 {
   "cmpadden/dagster.nvim",
-  config = function()
-    require('dagster').setup()
-  end
+  opts = {
+    dagster_binary = 'dagster'  -- path to `dagster` binary (default: 'dagster')
+  }
 }
 ```
-
 
 ## Usage
 
